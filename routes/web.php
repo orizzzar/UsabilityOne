@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /******* NORMAL *******/
 Route::get('/', function () {
@@ -46,3 +47,4 @@ Route::get('/profile', function () {
 });
 
 
+URL::forceScheme('https');
