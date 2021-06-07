@@ -46,5 +46,6 @@ Route::get('/profile', function () {
     return 'Profile';
 });
 
-
-URL::forceScheme('https');
+if (env('APP_ENV' === 'production')) {
+    URL::forceScheme('https');
+}
